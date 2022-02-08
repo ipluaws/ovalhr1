@@ -27,7 +27,7 @@ services:
       - 3306
       - 33060
   backend:
-    image: python:3.8-alpine
+    image: python:3.8-slim-buster
     build:
       context: ./backend
       dockerfile: Dockerfile
