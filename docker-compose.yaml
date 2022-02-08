@@ -27,8 +27,10 @@ services:
       - 3306
       - 33060
   backend:
+    image: backend
     build:
-      context: .
+      context: ./backend
+      dockerfile: Dockerfile
     restart: always
     secrets:
       - db-password
@@ -40,8 +42,10 @@ services:
     depends_on:
       - db
   proxy:
+    image: proxy
     build:
-      context: .
+      context: ./proxy
+      dockerfile: Dockerfile
     restart: always
     ports:
       - 80:80
