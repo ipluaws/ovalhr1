@@ -27,9 +27,9 @@ services:
       - 3306
       - 33060
   backend:
-    image: backend
+    image: python:3.8-alpine
     build:
-      context: backend
+      context: ./backend
       dockerfile: Dockerfile
     restart: always
     secrets:
@@ -42,9 +42,9 @@ services:
     depends_on:
       - db
   proxy:
-    image: proxy
+    image: nginx:1.13-alpine
     build:
-      context: proxy
+      context: ./proxy
       dockerfile: Dockerfile
     restart: always
     ports:
