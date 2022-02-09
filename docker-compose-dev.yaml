@@ -47,7 +47,7 @@ volumes:
   db-data:
 secrets:
   db-password:
-    file: db/password.txt
+    file: db/password-dev.txt
 networks:
   backnet:
   frontnet:

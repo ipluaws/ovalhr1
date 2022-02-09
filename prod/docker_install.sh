@@ -29,4 +29,6 @@ git clone https://github.com/ipluaws/ovalhr1.git
 
 cd ovalhr1
 
-docker stack deploy --compose-file docker-compose.yaml stackdemo
+cd prod
+
+docker stack deploy --compose-file docker-compose.yaml proddemo

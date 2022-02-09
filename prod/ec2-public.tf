@@ -11,7 +11,7 @@ resource "aws_instance" "public" {
         Name = "${var.project_name}-ec2-public"
     }
 
-    user_data = file("docker_install.sh")
+    user_data = "${file("docker_install.sh")}"
 }
 
 resource "aws_security_group" "ec2-public-sg" {
