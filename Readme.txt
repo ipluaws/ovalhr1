@@ -1,14 +1,17 @@
 Deployment instructions:
-
-- Here two environments has been created name 'dev' and 'prod'
-- Depends on your requirements browse the directory
+1. please run the git clone command (git clone https://github.com/ipluaws/ovalhr1.git)
+2. Once clonning of the git repository has been completed, navigate to the repo.  
+- For terraform deployment of 3-tier sample web application, two environments has been created name 'dev' and 'prod'
+- proxy, db and backend - these 3 folders are for 3-tier web application containing dockerfile to run each one as a docker container
+- Kubernetes folder is containing all required .yamls to deploy the solution to Kubernetes 
+- Depends on your environment browse the directory
 E.g: cd/ovalhr1/prod
 - Run terraform init to initialize 
 - Run terraform plan
 - Run terraform Apply
 - to destroy the whole infrastructure please run:
 - terraform destroy
-P.S: Please change the values in variables.tf file according to your environment, keypair values
+P.S: Please change the values in variables.tf file according to your environment
 
 In the shell script 'docker_install.sh', I have provided all required commands to run the complete stack at one go.
 Since horizontal scaling is one of the main requirements, to scale up the service simply execute the following command:
