@@ -32,3 +32,8 @@ cd ovalhr1
 cd prod
 
 sudo docker stack deploy --compose-file docker-compose.yaml proddemo
+
+sleep 480
+
+sudo docker service scale proddemo_proxy=2
+sudo docker service scale proddemo_backend=2

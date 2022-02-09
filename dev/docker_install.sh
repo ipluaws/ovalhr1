@@ -31,4 +31,9 @@ cd ovalhr1
 
 cd dev
 
-docker stack deploy --compose-file docker-compose.yaml devdemo
+sudo docker stack deploy --compose-file docker-compose.yaml devdemo
+
+sleep 480
+
+sudo docker service scale devdemo_proxy=2
+sudo docker service scale devdemo_backend=2
