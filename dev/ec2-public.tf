@@ -6,12 +6,11 @@ resource "aws_instance" "public" {
     vpc_security_group_ids = [ aws_security_group.ec2-public-sg.id ]
     depends_on = [ aws_vpc.ovalhr-dev, aws_internet_gateway.igw ]
     associate_public_ip_address = true
-
+	user_data = "${file("docker_install.sh")}"
     tags = {
         Name = "${var.project_name}-ec2-public"
     }
 
-    user_data = "${file("docker_install.sh")}"
 }
 
 resource "aws_security_group" "ec2-public-sg" {
