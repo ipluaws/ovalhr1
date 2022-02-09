@@ -10,7 +10,6 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
       interval: 3s
       retries: 5
-      start_period: 30s
     secrets:
       - db-password
     volumes:
@@ -47,7 +46,7 @@ volumes:
   db-data:
 secrets:
   db-password:
-    file: db/password.txt
+    file: ../db/password.txt
 networks:
   backnet:
   frontnet:

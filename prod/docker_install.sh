@@ -31,4 +31,4 @@ cd ovalhr1
 
 cd prod
 
-docker stack deploy --compose-file docker-compose.yaml proddemo
+sudo docker stack deploy --compose-file docker-compose.yaml proddemo
