@@ -10,7 +10,8 @@ E.g: cd/ovalhr1/prod
 - Run terraform init to initialize 
 - Run terraform plan
 - Run terraform Apply
-- After running terraform apply command, please give couple of minutes then copy the 'ec2-public-ip' address from Outputs and paste into your browser
+- After successful execution of terraform apply command, please give couple of minutes then copy the 'ec2-public-ip' address from Outputs and paste into your browser 
+(Sample-screenshot.png)
 
 In the shell script 'docker_install.sh', I have provided all required commands to run the complete stack at one go.
 Since horizontal scaling is one of the main requirements, to scale up the service simply execute the following command:
