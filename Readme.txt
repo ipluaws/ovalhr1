@@ -15,7 +15,7 @@ E.g: cd/ovalhr1/prod
 
 In the shell script 'docker_install.sh', I have provided all required commands to run the complete stack at one go.
 Since horizontal scaling is one of the main requirements, to scale up the service simply execute the following command:
-- sudo docker service scale devdemo_proxy=2 (change the number '2' as per requirements) 
+- sudo docker service scale proddemo_proxy=2 (change the number '2' as per requirements) 
 
 - To check if the service scaled up as per the value provided:
 Please execute:
